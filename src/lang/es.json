@@ -1,0 +1,147 @@
+{
+  "navbar": {
+    "cero": "SERVICIOS",
+    "one": "TRABAJOS",
+    "two": "BIO",
+    "three": "CONTACTO",
+    "four": "BLOG"
+  },
+  "services": {
+    "title": "Servicios",
+    "subtitle": "Nos dedicamos a las palabras. Observamos textos para ajustar sus gestos y matices y también construimos, desde el principio, textos nuevos. Te invitamos a conocer nuestros servicios editoriales.",
+    "editionTitle": "Edición",
+    "editionText": "Si escribiste un texto y querés recibir una lectura profesional (lector cero) y un informe literario o necesitás una corrección de estilo.",
+    "writingTitle": "Escritura",
+    "writingText": "Si tenés las ideas para un texto pero no sabés cómo expresarlas o no tenés tiempo para escribir. ",
+    "button": "Ver más"
+  },
+  "workprogress": {
+    "title": "Progreso de Trabajo",
+    "title1": "PUNTO DE PARTIDA",
+    "text1": "Lo primero que hacemos es tener una conversación con la persona interesada para saber qué está buscando y, a raíz de eso, preparamos una propuesta de trabajo.",
+    "title2": "PROCESO CREATIVO",
+    "text2": "Trabajamos en el proyecto de edición o escritura con entregas parciales y un canal de comunicación abierto con el cliente para consultas y observaciones.",
+    "title3": "TRASPASO TEXTUAL ",
+    "text3": "Entregamos el texto en el marco de un encuentro presencial o virtual para iniciar el cierre del proyecto.",
+    "title4": "ÚLTIMOS RETOQUES",
+    "text4": "Como trabajar con palabras es algo minucioso y artesanal, contemplamos la posibilidad de revisar el material entregado para concretar la versión definitiva."
+  },
+  "footer": {
+    "rights": "© 2023 Todos los derechos reservados. Olivia Pollitzer.",
+    "title": "Contactanos",
+    "work": "TRABAJOS",
+    "about": "BIO",
+    "contact": "CONTACTO",
+    "services": "SERVICIOS"
+  },
+
+  "contact": {
+    "title": "Contactanos",
+    "hola:": "¿Querés hablar sobre cómo podemos ayudarte?",
+    "subtitle2": "Dejanos un mensaje y contanos acerca de tu proyecto.",
+    "fullname": "Nombre Completo",
+    "email": "Email",
+    "message": "Mensaje",
+    "send": "Enviar",
+    "messageSent": "El mensaje fue enviado correctamente. ¡Nos pondremos en contacto lo antes posible!",
+    "thankyou": " ¡Muchas gracias!"
+  },
+
+  "about": {
+    "title": "Bio",
+    "text": "Los libros, las palabras y las historias fueron, desde chica, las maneras de entenderme a mí misma y a todo lo que me rodea. Soy licenciada en Letras (UCA), trabajé durante varios años como profesora de Literatura en inglés y castellano en secundaria, y desde hace tiempo me dedico de forma independiente a la edición y escritura. "
+  },
+  "editing": {
+    "title": "Edición",
+    "text": "Una mirada profesional sobre tu texto sirve para pulirlo y explorar las posibilidades que tiene. Las propuestas de edición que ofrecemos tienen alcances diferentes y abarcan grados diversos según tus objetivos: desde la revisión de un primer borrador y el asesoramiento para seguir escribiendo hasta una corrección minuciosa del texto para llevarlo a una versión final de calidad. Dentro de ese rango hay muchas otras variantes que se pueden personalizar acorde a lo que necesites. En cualquier caso, la lectura crítica del texto permitirá hacerle mejoras, afinarlo y alinearlo con tu voz y estilo. ",
+    "text2": "Contanos qué estás buscando",
+    "text3": "Te podemos ayudar a descubrir qué tipo de edición es preferible para tu texto según la etapa en la que te encuentres."
+  },
+  "writing": {
+    "title": "Escritura",
+    "text": "La idea es que nada te impida avanzar con la comunicación de tus ideas ni pierdas la oportunidad de materializar en palabras lo que querés transmitir. Las propuestas de escritura que ofrecemos aplican para textos cortos en plataformas variadas (redes sociales, páginas web, revistas, libros de fotos, entre otras) y para textos de ficción o de no ficción como un proyecto de ghostwriting. Esta última opción involucra una instancia de recopilación de contenido mediante encuentros presenciales y/o virtuales, una etapa de planificación para definir aspectos estructurales y de estilo, y un proceso de redacción con entregas parciales hasta llegar a la versión final.",
+    "text2": "Contanos qué estás buscando",
+    "text3": "Los textos se entregan en formato digital pero la propuesta puede incluir también el diseño y la impresión del libro."
+  },
+  "work": {
+    "one": {
+      "year": 2019,
+      "title": "proyecto Inés Miguens",
+      "subtitle": "Traducción de textos al inglés para concurso de fotografía"
+    },
+    "two": {
+      "year": 2019,
+      "title": "proyecto Casandra",
+      "subtitle": "Escritura de textos para página web"
+    },
+    "three": {
+      "year": 2019,
+      "title": "Viento, de Nicolás Cassese",
+      "subtitle": "Investigación, corrección y edición para el libro de Santiago Lange"
+    },
+    "four": {
+      "year": 2020,
+      "title": "proyecto A",
+      "subtitle": "Escritura de memorias"
+    },
+    "five": {
+      "year": 2020,
+      "title": "proyecto N",
+      "subtitle": "Escritura de memorias"
+    },
+    "six": {
+      "year": 2021,
+      "title": "proyecto B",
+      "subtitle": "Escritura de memorias"
+    },
+    "seven": {
+      "year": 2021,
+      "title": "proyecto P",
+      "subtitle": "Escritura de memorias"
+    },
+    "eight": {
+      "year": 2021,
+      "title": "proyecto G",
+      "subtitle": "Escritura de memorias"
+    },
+    "nine": {
+      "year": 2021,
+      "title": "proyecto Happy Together para Unilever",
+      "subtitle": "Producción de contenido y escritura para el libro Cocineras al rescate"
+    },
+    "ten": {
+      "year": 2021,
+      "title": "proyecto Estudio Ramos",
+      "subtitle": "Escritura de textos para el libro Honest Modernism"
+    },
+    "eleven": {
+      "year": 2022,
+      "title": "proyecto V",
+      "subtitle": "Escritura de memorias"
+    },
+    "twelve": {
+      "year": 2022,
+      "title": "proyecto W",
+      "subtitle": "Escritura de textos para libro de fotos"
+    },
+    "thirteen": {
+      "year": 2022,
+      "title": "proyecto Maderas en el tiempo",
+      "subtitle": "Escritura de textos para la muestra de arte de Sara Santamarina"
+    },
+    "fourteen": {
+      "year": 2022,
+      "title": "proyecto Madariaga",
+      "subtitle": "Producción de contenido y escritura del libro xxx"
+    },
+    "fifteen": {
+      "year": 2023,
+      "title": "proyecto M",
+      "subtitle": "Escritura de textos para libro de fotos"
+    }
+  },
+  "route404":{
+    "title":"PÁGINA NO ENCONTRADA",
+    "subtitle":"No hemos encontrado la página que esta buscando"
+  }
+}
