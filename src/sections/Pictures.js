@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import "../App.css";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import styled from "styled-components";

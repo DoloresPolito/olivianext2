@@ -7,25 +7,22 @@ import { useInView } from "react-intersection-observer";
 // import { useNavigate } from "react-router-dom";
 import plus from "../../public/assets/icons/services/plus-blue.png";
 import Image from "next/image";
+import Link from "next/link";
 
-const Services = ({info}) => {
+const Services = ({ info }) => {
   const animation1 = useAnimation();
   const animation2 = useAnimation();
   const animation3 = useAnimation();
   const { ref, inView } = useInView({ threshold: 0.3 });
-//   const navigate = useNavigate();
-//   const handleNavigate = (route) => {
-//     navigate(`/${route}`);
-//   };
+  //   const navigate = useNavigate();
+  //   const handleNavigate = (route) => {
+  //     navigate(`/${route}`);
+  //   };
 
-
-const [width, setWidth] = useState(null);
-
-
+  const [width, setWidth] = useState(null);
 
   useEffect(() => {
     if (inView) {
-
       animation3.start({
         opacity: 1,
         transition: {
@@ -82,32 +79,31 @@ const [width, setWidth] = useState(null);
     <>
       <>
         <ServiceSection ref={ref}>
-    
-          {width >= 1160 ? (<>
-                <Parallax speed={-8}>
-            <Box animate={animation2}>
-            <Content>
-              <H2>{info.title}</H2>
-              <BoldLine />
-              <motion.p animate={animation2}>{info.subtitle}</motion.p>
-            </Content>
-          </Box>
+          {width >= 1160 ? (
+            <>
+              <Parallax speed={-8}>
+                <Box animate={animation2}>
+                  <Content>
+                    <H2>{info.title}</H2>
+                    <BoldLine />
+                    <motion.p animate={animation2}>{info.subtitle}</motion.p>
+                  </Content>
+                </Box>
               </Parallax>
-          </>)
-          : (<>
-          
-          <Box >
-          <Parallax speed={3}>
-            <Content>
-              <H2 >{info.title}</H2>
-              <BoldLine />
-              <motion.p >{info.subtitle}</motion.p>
-            </Content>
-            </Parallax>
-          </Box>
-          </>)}
-         
-      
+            </>
+          ) : (
+            <>
+              <Box>
+                <Parallax speed={3}>
+                  <Content>
+                    <H2>{info.title}</H2>
+                    <BoldLine />
+                    <motion.p>{info.subtitle}</motion.p>
+                  </Content>
+                </Parallax>
+              </Box>
+            </>
+          )}
 
           {width >= 1160 ? (
             <>
@@ -118,23 +114,18 @@ const [width, setWidth] = useState(null);
                     <p>{info.editionText}</p>
 
                     <div className="overlay">
-                      <a
-
-                        // onClick={() => handleNavigate("editing")}
-                      >
+                      <Link href="/editing">
                         <Image src={plus} alt="plus" />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="hoverable">
                     <h4>{info.writingTitle}</h4>
                     <p>{info.writingText}</p>
                     <div className="overlay">
-                      <a
-                        // onClick={() => handleNavigate("writing")}
-                      >
+                      <Link href="/writing">
                         <Image src={plus} alt="plus" />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -142,22 +133,24 @@ const [width, setWidth] = useState(null);
             </>
           ) : (
             <>
-              <ServiceContainerMobile 
+              <ServiceContainerMobile
               // animate={animation1}
               >
-                <div
-                //  onClick={() => handleNavigate("editing")}
-                 >
-                  <h4>{info.editionTitle}</h4>
-                  <p>{info.editionText}</p>
-                </div>
+                <Link href="/editing">
+                  <div>
+                    <h4>{info.editionTitle}</h4>
+                    <p>{info.editionText}</p>
+                  </div>
+                </Link>
+
                 <MobileLine />
-                <div
-                //  onClick={() => handleNavigate("writing")}
-                 >
-                  <h4>{info.writingTitle}</h4>
-                  <p>{info.writingText}</p>
-                </div>
+                <Link href="/writing">
+                  <div>
+                    <h4>{info.writingTitle}</h4>
+                    <p>{info.writingText}</p>
+                  </div>
+                </Link>
+
                 <MobileLine />
               </ServiceContainerMobile>
             </>
@@ -192,8 +185,6 @@ const Box = styled(motion.div)`
   height: 370px;
   background-color: #a6aa97;
 
-
-
   @media only screen and (max-width: 1160px) {
     width: 100%;
     height: 320px;
@@ -209,7 +200,6 @@ const Content = styled.div`
   flex-direction: column;
   width: 80%;
   margin: 0 auto;
-
 
   @media only screen and (max-width: 1160px) {
     width: 70%;
@@ -243,94 +233,93 @@ const ServicesContainer = styled(motion.div)`
   justify-content: center;
   margin-left: 180px;
 
-  p{
+  p {
     font-weight: 500;
-    color: #5F5F67;
+    color: #5f5f67;
   }
 
   .hoverable-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.hoverable {
-  position: relative;
-  width: 500px;
-  height: 190px;
-  /* margin: 5px; */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  border-bottom: 1.5px solid #5F5F67;
-  height: 97%;
-}
+  .hoverable {
+    position: relative;
+    width: 500px;
+    height: 190px;
+    /* margin: 5px; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-bottom: 1.5px solid #5f5f67;
+    height: 97%;
+  }
 
-.hoverable p {
-  margin: 0;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  line-height: 22px;
-  letter-spacing: 1px;
-  font-weight: 500;
-  color: #5F5F67;
-  width: 500px;
-  text-align: left;
-  padding-bottom: 20px;
-}
+  .hoverable p {
+    margin: 0;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #5f5f67;
+    width: 500px;
+    text-align: left;
+    padding-bottom: 20px;
+  }
 
-.hoverable h4 {
-  color: #5F5F67;
-  font-size: 25px;
-  font-family: "Bebas Neue", cursive;
-  font-weight: 600;
-  letter-spacing: 1.8px;
-}
+  .hoverable h4 {
+    color: #5f5f67;
+    font-size: 25px;
+    font-family: "Bebas Neue", cursive;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+  }
 
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  background-color: transparent;
-  padding: 10px;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  transition: max-height 0.8s ease-in-out, opacity 0.5s ease-in-out;
-}
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    background-color: transparent;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    transition: max-height 0.8s ease-in-out, opacity 0.5s ease-in-out;
+  }
 
-.hoverable:hover .overlay {
-  max-height: 200px;
-  opacity: 1;
-}
+  .hoverable:hover .overlay {
+    max-height: 200px;
+    opacity: 1;
+  }
 
-.overlay p {
-  margin: 0;
-  margin-bottom: 10px;
-}
+  .overlay p {
+    margin: 0;
+    margin-bottom: 10px;
+  }
 
-.overlay a {
-  color: #fff;
-  text-decoration: underline;
-  display: block;
+  .overlay a {
+    color: #fff;
+    text-decoration: underline;
+    display: block;
 
-  cursor: pointer;
-}
+    cursor: pointer;
+  }
 
-.overlay a img {
-  height: 30px;
-  width: 30px;
-  margin-bottom: 3px;
-}
-
+  .overlay a img {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 3px;
+  }
 `;
 
 const BoldLine = styled(motion.div)`
@@ -356,9 +345,8 @@ const ServiceContainerMobile = styled(motion.div)`
     flex-direction: column;
     margin-top: 30px;
 
-
     h4 {
-      color: #5F5F67;
+      color: #5f5f67;
       font-size: 25px;
       font-family: "Bebas Neue", cursive;
       font-weight: 600;
@@ -371,20 +359,19 @@ const ServiceContainerMobile = styled(motion.div)`
       line-height: 22px;
       letter-spacing: 1px;
       font-weight: 500;
-      color: #5F5F67;
+      color: #5f5f67;
       text-align: left;
       margin-top: -10px;
 
       @media only screen and (max-width: 700px) {
         font-size: 13px;
-  
       }
     }
   }
 `;
 
 const MobileLine = styled.div`
-  border-top: 1.5px solid #5F5F67;;
+  border-top: 1.5px solid #5f5f67;
   width: 100%;
   height: 2px !important;
   margin-top: 10px !important;
