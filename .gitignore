@@ -12,6 +12,11 @@
 /.next/
 /out/
 
+/.next/cache//
+/.next/server//
+
+
+
 # production
 /build
 
@@ -38,5 +43,4 @@ next-env.d.ts
 *.log
 
 
-.next/cache/
-.next/server/
+
