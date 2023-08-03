@@ -6,10 +6,14 @@ import toplogo from "../../public/assets/logo2/isologo_Black - Fondo Transparent
 import instagram from "../../public/assets/icons/instagram/instagram-blue.png";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
+
 
 const Navbar = ({ info }) => {
   const [width, setWidth] = useState(null);
   const [view, setView] = useState();
+
+  const { locale, locales, push } = useRouter();
 
   useEffect(() => {
     const handleResize = () => {
@@ -32,7 +36,10 @@ const Navbar = ({ info }) => {
   //     localStorage.setItem("lng", lng);
   //   };
 
-
+  const handleClick = (l) => () => {
+    push("/", undefined, { locale: l });
+ 
+  };
 
   return (
     <NavbarSection mode={medium >= 1040 ? "absolute" : "fixed"} view={view}>
@@ -98,6 +105,12 @@ const Navbar = ({ info }) => {
                 {" "}
                 EN
               </LanguageButton>
+              <h1>{locale}</h1>
+              {locales.map((l) => (
+                <button key={l} onClick={handleClick(l)}>
+                  {l}
+                </button>
+              ))}
             </section>
           </>
         ) : (
