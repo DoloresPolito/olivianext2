@@ -15,7 +15,7 @@
 /.next/cache//
 /.next/server//
 
-
+.env
 
 # production
 /build
@@ -41,6 +41,4 @@ next-env.d.ts
 
 .DS_Store
 *.log
-
-
 

@@ -8,42 +8,39 @@ import { Parallax } from "react-scroll-parallax";
 import SocialMedia from "../components/SocialMedia";
 import Footer from "../sections/Footer";
 import Navbar from "../components/Navbar";
+import axios from "axios";
 
 const Contact = (props) => {
   const [t] = useTranslation("global");
-  const frmContact = { userName: ``, userEmail: ``, message: `` };
   const [contact, setContact] = useState("");
-  const [showMessage, setShowMessage] = useState(false);
-
   const [sending, setSending] = useState(false);
   const [messageSent, setMessageSent] = useState(false);
 
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setContact({ ...contact, [name]: value });
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSending(true);
 
-    emailjs
-      .send(`service_lsilwkf`, `template_zefnjzw`, contact, `F-wmz4d9VI_6zEds5`)
-      .then(
-        (response) => {
-          console.log(`SUCCESS!`, response.status, response.text);
-          setContact(frmContact);
-          setShowMessage(true);
-          setSending(false);
-          setMessageSent(true);
-        },
-        (err) => {
-          console.log(`FAILED...`, err);
-        }
-      );
+    try {
+      axios.post("./api/send-email", formData);
+      alert('Correo enviado correctamente.');
+      // setMessageSent(true);
+    } catch (error) {
+      alert("Error al enviar el correo.");
+      console.error(error);
+    }
   };
-
-
 
   return (
     <Page>
@@ -53,7 +50,7 @@ const Contact = (props) => {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-      <Navbar info={props.navbar}/>
+        <Navbar info={props.navbar} />
         <ContactSection style={{ backgroundColor: "#EAE9E5" }}>
           {messageSent ? (
             <SentSection>
@@ -64,10 +61,10 @@ const Contact = (props) => {
           ) : (
             <>
               <Column1
-              
-              initial={{ y: "10%", opacity: 0 }}
-              animate={{ y: 0, opacity: 1  }}
-              transition={{ duration: 0.5, delay: 0.5 }}>
+                initial={{ y: "10%", opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+              >
                 <Parallax speed={-3}>
                   <h4
                     as={motion.h2}
@@ -78,14 +75,12 @@ const Contact = (props) => {
                   >
                     {props.contact.subtitle2}
                   </h4>
-    
                 </Parallax>
                 <SocialMedia />
               </Column1>
-              <Column2 
-              
+              <Column2
                 initial={{ x: "30px", opacity: 0 }}
-                animate={{ x: 0, opacity: 1  }}
+                animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
                 <>
@@ -108,17 +103,17 @@ const Contact = (props) => {
                           placeholder={props.contact.fullname}
                           type="text"
                           required
-                          value={contact.userName}
-                          name="userName"
+                          value={contact.name}
+                          name="name"
                           onChange={handleChange}
                         />
 
                         <Input2
                           className="form-item"
                           placeholder={props.contact.email}
-                          value={contact.userEmail}
+                          value={contact.email}
                           onChange={handleChange}
-                          name="userEmail"
+                          name="email"
                           type="text"
                           required
                         />
@@ -151,22 +146,22 @@ const Contact = (props) => {
           )}
         </ContactSection>
       </motion.div>
-      <Footer view="contact" info={props.footer}/>
+      <Footer view="contact" info={props.footer} />
     </Page>
   );
 };
 
 export async function getStaticProps({ locale }) {
-    const response = await import(`../lang/${locale}.json`);
-  
-    return {
-      props: {
-        contact: response.default.contact,
-        footer:response.default.footer,
-        navbar: response.default.navbar
-      },
-    };
-  }
+  const response = await import(`../lang/${locale}.json`);
+
+  return {
+    props: {
+      contact: response.default.contact,
+      footer: response.default.footer,
+      navbar: response.default.navbar,
+    },
+  };
+}
 
 const Page = styled.div`
   height: 100%;
@@ -207,7 +202,8 @@ const Column1 = styled(motion.div)`
     display: flex;
     justify-content: center;
     color: #6a6f58;
-    font-family: "Bebas Neue", cursive;
+    /* font-family: "Bebas Neue", cursive; */
+    font-family: var(--font-bebasneue);
     font-weight: 600;
     letter-spacing: 2px;
     font-size: 50px;
@@ -229,7 +225,6 @@ const RingContainer = styled.div`
   position: relative;
   top: 100px;
   left: 50%;
-
 `;
 
 const FormContainer = styled.div`
@@ -283,7 +278,8 @@ const Form2 = styled(motion.form)`
     background-color: #6a6f58;
     border-radius: 20px;
     border: 1px solid #6a6f58;
-    font-family: "Bebas Neue", cursive;
+    /* font-family: "Bebas Neue", cursive; */
+    font-family: var(--font-bebasneue);
     letter-spacing: 1.2px;
 
     :hover {
@@ -302,7 +298,6 @@ const Input2 = styled.input`
   border-radius: 20px;
   border: 1px solid #6a6f58;
   margin-bottom: 12px;
-
 `;
 
 const SentSection = styled.div`
@@ -328,7 +323,8 @@ const SentSection = styled.div`
     display: flex;
     justify-content: center;
     color: #6a6f58;
-    font-family: "Bebas Neue", cursive;
+    /* font-family: "Bebas Neue", cursive; */
+    font-family: var(--font-bebasneue);
     font-weight: 600;
     letter-spacing: 2px;
     font-size: 50px;

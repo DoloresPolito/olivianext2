@@ -61,7 +61,8 @@ font-weight: 900;
 font-size: 16px;
 line-height: 14px;
 text-decoration: none;
-font-family: "Bebas Neue", cursive;
+/* font-family: "Bebas Neue", cursive; */
+font-family: var(--font-bebasneue);
 letter-spacing: 2px;
 
 

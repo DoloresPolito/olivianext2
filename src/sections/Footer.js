@@ -334,7 +334,8 @@ const Column2 = styled(motion.div)`
   right: 120px;
 
   ul {
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: var(--font-montserrat);
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -359,7 +360,8 @@ const Column2 = styled(motion.div)`
 `;
 
 const FooterTitle = styled.h4`
-  font-family: "Bebas Neue", cursive;
+  /* font-family: "Bebas Neue", cursive; */
+  font-family: var(--font-bebasneue);
   font-size: 20px;
   line-height: 22px;
   color: #ffffff;
@@ -385,7 +387,8 @@ const CopyRight = styled(motion.div)`
 
   p {
     font-size: 13px;
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: var(--font-montserrat);
     line-height: 30px;
     font-weight: 400;
     letter-spacing: 1px;
@@ -401,7 +404,8 @@ const CopyRight2 = styled.div`
 
   p {
     font-size: 12px;
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: var(--font-montserrat);
     line-height: 30px;
     font-weight: 400;
     letter-spacing: 1px;
@@ -421,7 +425,8 @@ const Div = styled.div`
   margin-left: 50px;
 
   ul {
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: var(--font-montserrat);
     font-style: normal;
     font-weight: 400;
     font-size: 14px;

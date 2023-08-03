@@ -18,7 +18,7 @@ const About = (props) => {
         transition={{ duration: 0.5, ease: "easeIn" }}
         exit={{ opacity: 0 }}
       >
-        <Navbar info={props.navbar}/>
+        <Navbar info={props.navbar} style={{zIndex:'100'}}/>
         <Section >
           <Image src={picture} alt='background' layout="fill" objectFit="cover" />
           <Box
@@ -88,17 +88,16 @@ export async function getStaticProps({ locale }) {
 
 const Section = styled.div`
   width: 100%;
-  height: 90vh !important;
+  height: 80vh !important;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #5f5f67;
-  height: auto;
-  /* background: url(${picture}) no-repeat center top; */
+  background-image: url("/assets/photos/bio3.png");
   background-size: cover;
-  position: fixed;
-  z-index: -1;
-
+  background-position: center;
+  margin-top: 20px !important;
+  padding-top: 30px !important;
 `;
 
 const Box = styled(motion.div)`
@@ -154,7 +153,8 @@ const Content = styled.div`
 
   p {
     font-size: 14px;
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: var(--font-montserrat);
     letter-spacing: 1.2px;
     line-height: 35px;
     color: #ffffff;
@@ -174,7 +174,8 @@ const Content = styled.div`
 
 const H2 = styled(motion.h2)`
   color: #ffffff;
-  font-family: "Bebas Neue", cursive;
+  /* font-family: "Bebas Neue", cursive; */
+  font-family: var(--font-bebasneue);
   font-weight: 600;
   letter-spacing: 2px;
   font-size: 50px;

@@ -204,7 +204,8 @@ const Titles = styled.div`
   }
 
   p {
-    font-family: "Bebas Neue", cursive;
+    /* font-family: "Bebas Neue", cursive; */
+    font-family: var(--font-bebasneue);
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 2px;
@@ -238,7 +239,8 @@ const Numbers = styled.div`
   }
 
   p {
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: var(--font-montserrat);
     font-size: 25px;
     line-height: 20px;
     letter-spacing: 1px;
@@ -263,7 +265,8 @@ const Texts = styled.div`
   padding: 5px;
 
   p {
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: var(--font-montserrat);
     font-size: 13px;
     line-height: 20px;
     letter-spacing: 1px;

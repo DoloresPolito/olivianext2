@@ -70,7 +70,8 @@ const TabsBox = styled.div`
   margin-top: 40px;
 
   a {
-    font-family: "Montserrat";
+    /* font-family: "Montserrat"; */
+    font-family: var(--font-montserrat);
     font-weight: 600;
     font-size: 14px;
     line-height: 24px;

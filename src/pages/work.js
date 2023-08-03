@@ -264,7 +264,8 @@ const WorkDate = styled.div`
 
   p {
     color: #6a6f58;
-    font-family: "Bebas Neue", cursive;
+    /* font-family: "Bebas Neue", cursive; */
+    font-family: var(--font-bebasneue);
     font-weight: 600;
     letter-spacing: 2px;
     font-size: 18px;
@@ -283,7 +284,8 @@ const Content = styled.div`
   margin-left: 40px;
 `;
 const WorkTitle = styled.h4`
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: var(--font-montserrat);
   font-size: 28px;
   letter-spacing: 0.5px;
   font-weight: 400;
@@ -299,7 +301,8 @@ const WorkTitle = styled.h4`
 `;
 
 const More = styled.p`
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: var(--font-montserrat);
   font-size: 14px;
   letter-spacing: 0.3px;
   font-weight: 500;

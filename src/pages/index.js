@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import Pictures from "../sections/Pictures";
 import ScrollToTop from "react-scroll-to-top";
 import WorkProgress from "../sections/WorkProgress";
-import books from "../../public/assets/photos/heroextralow.jpg";
 import booksmobile from "../../public/assets/photos/heroextralowmobile.png";
 import Services from "../sections/Services";
 import Footer from "../sections/Footer";
@@ -54,12 +53,7 @@ const Home = (props) => {
                   transition={{ duration: 0.5, ease: "easeIn" }}
                   style={{ display: "flex", justifyContent: "center" }}
                 >
-                  {/* <Image
-                    src={books}
-                    alt="background"
-                    layout="fill"
-                    objectFit="cover"
-                  /> */}
+
 
                   <Image src={logo2} alt="logo" className="logo"/>
                 </motion.div>
