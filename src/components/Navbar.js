@@ -31,10 +31,6 @@ const Navbar = ({ info }) => {
   const [isOpen, setOpen] = useState(false);
   const medium = 1045;
 
-  //   const handleChangeLng = (lng) => {
-  //     i18n.changeLanguage(lng);
-  //     localStorage.setItem("lng", lng);
-  //   };
 
   const handleClick = (l) => () => {
     push("/", undefined, { locale: l });
@@ -53,25 +49,9 @@ const Navbar = ({ info }) => {
         {width >= medium ? (
           <>
             <TabsBox view={view} mode="large">
-              {view == "oliviapollitzer" ||
-              view == "oliviapollitzer?services" ? (
-                <>
-                  {/* <SmoothLink
-                    to="services"
-                    spy={true}
-                    smooth={true}
-                    offset={70}
-                    duration={800}
-                    className="navlist"
-                  >
-                    {t("navbar.0")}
-                  </SmoothLink> */}
-                </>
-              ) : (
-                <>
-                  <Link href="/oliviapollitzer?services">{info.cero} </Link>
-                </>
-              )}
+   
+                  <Link href="/">{info.cero} </Link>
+        
 
               <Link href="/work">{info.one}</Link>
 
@@ -96,20 +76,22 @@ const Navbar = ({ info }) => {
               </Circle>
             </TabsBox>
 
-            <section>
-              <LanguageButton view={view} onClick={() => handleChangeLng("es")}>
+        
+              {/* <LanguageButton view={view} onClick={() => handleChangeLng("es")}>
                 ES{" "}
               </LanguageButton>
               /
               <LanguageButton view={view} onClick={() => handleChangeLng("en")}>
                 {" "}
                 EN
-              </LanguageButton>
-              <h1>{locale}</h1>
+              </LanguageButton> */}
+              {/* <h1>{locale}</h1> */}
+              <section>
               {locales.map((l) => (
-                <button key={l} onClick={handleClick(l)}>
-                  {l}
-                </button>
+                <LanguageButton key={l} onClick={handleClick(l)}>
+                  {l} |
+                </LanguageButton>
+              
               ))}
             </section>
           </>

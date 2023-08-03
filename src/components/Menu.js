@@ -1,16 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 import Tabs from "./Tabs";
-import { useTranslation } from "react-i18next";
+
+import { useRouter } from "next/router";
 
 
 const Menu = ({ open, setOpen, view, info }) => {
-  const [t, i18n] = useTranslation("global");
+  const { locale, locales, push } = useRouter();
+
+  const handleClick = (l) => () => {
+    push("/", undefined, { locale: l });
+  };
 
   return (
     <StyledMenu open={open} view={view}>
-      <Tabs open={open} setOpen={setOpen} view={view} info={info}/>
-      <section>
+      <Tabs open={open} setOpen={setOpen} view={view} info={info} />
+      {/* <section>
         <LanguageButton onClick={() => i18n.changeLanguage("es")}>
           ES
         </LanguageButton>
@@ -18,16 +23,23 @@ const Menu = ({ open, setOpen, view, info }) => {
         <LanguageButton onClick={() => i18n.changeLanguage("en")}>
           EN
         </LanguageButton>
+      </section> */}
+
+      <section>
+        {locales.map((l) => (
+          <LanguageButton key={l} onClick={handleClick(l)}>
+            {l} |
+          </LanguageButton>
+        ))}
       </section>
     </StyledMenu>
   );
 };
 
 export const StyledMenu = styled.nav`
-
   section {
     position: absolute;
-    margin-top: 220px;
+    margin-top: 320px;
     left: 11px;
     align-self: center;
     font-size: 14px;
@@ -36,7 +48,11 @@ export const StyledMenu = styled.nav`
   flex-direction: column;
   justify-content: flex-start;
   /* background-color: #EAE9E5; */
-  background-color: ${(props) => (props.view === "oliviapollitzer" || props.view === "oliviapollitzer?services" ? " #EAE9E5 !important" : "#f6f6f6 !important")};
+  background-color: ${(props) =>
+    props.view === "oliviapollitzer" ||
+    props.view === "oliviapollitzer?services"
+      ? " #EAE9E5 !important"
+      : "#f6f6f6 !important"};
 
   text-align: left;
   padding: 150px 100px 30px 30px;
@@ -44,29 +60,24 @@ export const StyledMenu = styled.nav`
   z-index: 1;
   top: 0;
   right: 0;
-  bottom:0;
+  bottom: 0;
   transition: transform 0.3s ease-in-out;
-  transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
-
-
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
 `;
 
 const LanguageButton = styled.button`
-background-color: transparent;
-border: none;
-cursor: pointer;
-color:#959985;
-/* font-family: "Montserrat"; */
-font-weight: 900;
-font-size: 16px;
-line-height: 14px;
-text-decoration: none;
-/* font-family: "Bebas Neue", cursive; */
-font-family: var(--font-bebasneue);
-letter-spacing: 2px;
-
-
-
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #959985;
+  /* font-family: "Montserrat"; */
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 14px;
+  text-decoration: none;
+  /* font-family: "Bebas Neue", cursive; */
+  font-family: var(--font-bebasneue);
+  letter-spacing: 2px;
 `;
 
 export default Menu;
