@@ -76,7 +76,7 @@ const Services = ({ info }) => {
   return (
     <>
       <>
-        <ServiceSection ref={ref}>x
+        <ServiceSection ref={ref}>
           {width >= 1160 ? (
             <>
               <Parallax speed={-8}>

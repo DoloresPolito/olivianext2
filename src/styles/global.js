@@ -28,11 +28,11 @@ body {
     color: inherit;
   }
 
-  @font-face {
+  /* @font-face {
    font-family: 'Bebas-Neue';
    src: url('../pages/fonts/BebasNeue-Regular.ttf') format('opentype');
    font-display: swap;
-  }
+  } */
 
 
  

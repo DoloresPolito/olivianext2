@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo2 from "../../public/assets/logo3/cuadradoOLI_Grey.png";
+import logo2 from "../../public/assets/logo3/logocover.png";
 import styled from "styled-components";
 import { Parallax } from "react-scroll-parallax";
 import { motion } from "framer-motion";
@@ -73,7 +73,7 @@ const Home = (props) => {
                   transition={{ duration: 0.5, ease: "easeIn" }}
                   style={{ display: "flex", justifyContent: "center" }}
                 >
-                  <Logo src={logo2} />
+                  <Logo src={logo2} alt="logo"/>
                 </motion.div>
               </Parallax>
             </CoverSectionMobile>

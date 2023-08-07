@@ -30,24 +30,29 @@ const Tabs = ({ mode, open, setOpen, view, info}) => {
             onClick={() => handleClose()}
           >
             {info.cero}
+  
           </SmoothLink>
         </>
       ) : (
         <>
           <Link href="/oliviapollitzer?services" onClick={() => handleClose()}>
           {info.cero}
+ 
           </Link>
         </>
       )}
 
       <Link href="/work" onClick={() => handleClose()}>
       {info.one}
+
       </Link>
       <Link href="/bio" onClick={() => handleClose()}>
       {info.two}
+  
       </Link>
       <Link href="/contact" onClick={() => handleClose()}>
       {info.three}
+  
       </Link>
     </TabsBox>
   );

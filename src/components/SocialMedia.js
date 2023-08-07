@@ -18,6 +18,7 @@ const SocialMedia = () => {
             // exit={{ opacity: 0 }}
             // transition={{ duration: 0.5, ease: "easeOut" }}
             src={mail}
+            alt="1"
           />
         </a>
       </Circle>
@@ -29,6 +30,7 @@ const SocialMedia = () => {
             // animate={{ opacity: 1 }}
             // exit={{ opacity: 0 }}
             // transition={{ duration: 0.5, ease: "easeOut" }}
+            alt="2"
           />
         </a>
       </Circle>
@@ -43,6 +45,7 @@ const SocialMedia = () => {
             // exit={{ opacity: 0 }}
             // transition={{ duration: 0.5, ease: "easeOut" }}
             src={whatsapp}
+            alt="3"
           />
         </a>
       </Circle>

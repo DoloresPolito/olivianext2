@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import logo from "../../public/assets/footer-olivia pollitzer__Black.png";
+import logo from "../../public/assets/logo1/footer-olivia.png";
 import { useTranslation } from "react-i18next";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -58,9 +58,9 @@ const Footer = ({ info }) => {
           <FooterContainer mode={width} ref={ref}>
             <motion.div>
               {" "}
-              {/* <ImageDiv>
+              <ImageDiv>
                 <Image src={logo} alt="logo" />
-              </ImageDiv> */}
+              </ImageDiv>
             </motion.div>
 
             <Column1 animate={animation}>
