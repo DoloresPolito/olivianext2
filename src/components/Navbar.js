@@ -42,7 +42,7 @@ const Navbar = ({ info }) => {
       <NavbarContainer>
         <Link href="/">
         <LogoContainer>
-          <Image src={toplogo} alt="logo"  />
+          {/* <Image src={toplogo} alt="logo"  /> */}
         </LogoContainer>
         </Link>
  
