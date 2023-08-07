@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-// import "../App.css";
 import styled from "styled-components";
 import { Parallax } from "react-scroll-parallax";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-// import { useNavigate } from "react-router-dom";
 import plus from "../../public/assets/icons/services/plus-blue.png";
 import Image from "next/image";
 import Link from "next/link";

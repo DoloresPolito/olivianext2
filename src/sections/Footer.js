@@ -58,9 +58,9 @@ const Footer = ({ info }) => {
           <FooterContainer mode={width} ref={ref}>
             <motion.div>
               {" "}
-              <ImageDiv>
+              {/* <ImageDiv>
                 <Image src={logo} alt="logo" />
-              </ImageDiv>
+              </ImageDiv> */}
             </motion.div>
 
             <Column1 animate={animation}>

@@ -34,7 +34,7 @@ const Contact = (props) => {
 
     try {
       axios.post("./api/send-email", formData);
-      alert('Correo enviado correctamente.');
+      alert("Correo enviado correctamente.");
       // setMessageSent(true);
     } catch (error) {
       alert("Error al enviar el correo.");

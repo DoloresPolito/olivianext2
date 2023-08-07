@@ -11,11 +11,14 @@ import Services from "../sections/Services";
 import Footer from "../sections/Footer";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
+import { useTranslation } from 'react-i18next';
 
 const Home = (props) => {
   const [width, setWidth] = useState(null);
   const medium = 800;
   const small = 450;
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleResize = () => {
@@ -43,7 +46,7 @@ const Home = (props) => {
     <>
       <Page>
         <Navbar info={props.navbar} />
-        {width >= small ? (
+        {/* {width >= small ? (
           <>
             <CoverSection width={width}>
               <Parallax speed={1}>
@@ -75,7 +78,7 @@ const Home = (props) => {
               </Parallax>
             </CoverSectionMobile>
           </>
-        )}
+        )} */}
 
         <section id="services">
           <Services info={props.services} />

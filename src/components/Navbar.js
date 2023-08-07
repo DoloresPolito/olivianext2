@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Hamburger from "hamburger-react";
 import styled from "styled-components";
 import Menu from "./Menu";
-import toplogo from "../../public/assets/logo2/isologo_Black - Fondo Transparente.png";
+import toplogo from "../../public/assets/logo2/logo.png";
 import instagram from "../../public/assets/icons/instagram/instagram-blue.png";
 import Link from "next/link";
 import Image from "next/image";
@@ -41,9 +41,9 @@ const Navbar = ({ info }) => {
     <NavbarSection mode={medium >= 1040 ? "absolute" : "fixed"} view={view}>
       <NavbarContainer>
         <Link href="/">
-        <LogoContainer>
+        {/* <LogoContainer>
           <Image src={toplogo} alt="logo"  />
-        </LogoContainer>
+        </LogoContainer> */}
         </Link>
  
         {width >= medium ? (
