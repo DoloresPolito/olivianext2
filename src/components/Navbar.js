@@ -41,9 +41,11 @@ const Navbar = ({ info }) => {
     <NavbarSection mode={medium >= 1040 ? "absolute" : "fixed"} view={view}>
       <NavbarContainer>
         <Link href="/">
-        {/* <LogoContainer>
-          <Image src={toplogo} alt="logo"  />
-        </LogoContainer> */}
+        <InstaContainer>
+          {/* <Image src={toplogo} alt="logo"  /> */}
+
+            <Image src={instagram} alt="insta"  />
+        </InstaContainer>
         </Link>
  
         {width >= medium ? (
@@ -121,6 +123,23 @@ const LogoContainer = styled.div`
     top: -103px;
     height: 280px;
     width: 160px;
+  }
+`;
+
+const InstaContainer = styled.div`
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 60px;
+  width: 60px;
+
+  img {
+    cursor: pointer;
+    position: absolute;
+    left: 0px;
+    top: 3px;
+    height: 60px;
+    width: 60px;
   }
 `;
 

@@ -46,7 +46,7 @@ const Home = (props) => {
     <>
       <Page>
         <Navbar info={props.navbar} />
-        {/* {width >= small ? (
+        {width >= small ? (
           <>
             <CoverSection width={width}>
               <Parallax speed={1}>
@@ -78,7 +78,7 @@ const Home = (props) => {
               </Parallax>
             </CoverSectionMobile>
           </>
-        )} */}
+        )}
 
         <section id="services">
           <Services info={props.services} />
