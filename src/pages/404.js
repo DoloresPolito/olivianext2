@@ -2,20 +2,20 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import Link from 'next/link';
+// import Link from 'next/link';
 import { motion } from "framer-motion";
 
 const PageNotFound = () => {
     // const [t] = useTranslation("global");
   return (
     <>
-      <Page>
-        <motion.div
+      <div>
+        {/* <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-        >
+        > */}
           <Section404>
             <h4
               as={motion.h2}
@@ -29,18 +29,18 @@ const PageNotFound = () => {
             </h4>
 
             <h2>    disculpa las molestias</h2>
-            <Link href='/'>Volver a inicio</Link>
+            {/* <Link href='/'>Volver a inicio</Link> */}
           </Section404>
-        </motion.div>
-      </Page>
+        {/* </motion.div> */}
+      </div>
     </>
   );
 };
 
-const Page = styled.div`
-  height: 100%;
-  width: 100%;
-`;
+// const Page = styled.div`
+//   height: 100%;
+//   width: 100%;
+// `;
 
 const Section404 = styled.div`
   width: 100%;
