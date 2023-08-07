@@ -41,11 +41,11 @@ const Navbar = ({ info }) => {
     <NavbarSection mode={medium >= 1040 ? "absolute" : "fixed"} view={view}>
       <NavbarContainer>
         <Link href="/">
-        <InstaContainer>
-          {/* <Image src={toplogo} alt="logo"  /> */}
+        <LogoContainer>
+          <Image src={toplogo} alt="logo"  />
 
-            <Image src={instagram} alt="insta"  />
-        </InstaContainer>
+            {/* <Image src={instagram} alt="insta"  /> */}
+        </LogoContainer>
         </Link>
  
         {width >= medium ? (
