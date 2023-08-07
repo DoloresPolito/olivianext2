@@ -43,8 +43,6 @@ const Navbar = ({ info }) => {
         <Link href="/">
         <LogoContainer>
           <Image src={toplogo} alt="logo"  />
-
-            {/* <Image src={instagram} alt="insta"  /> */}
         </LogoContainer>
         </Link>
  

@@ -218,7 +218,7 @@ const Footer = ({ info }) => {
             </Div>
             <div>
               {" "}
-              <Logo2 src={logo} />
+              {/* <Logo2 src={logo} /> */}
             </div>
 
             <CopyRight2>

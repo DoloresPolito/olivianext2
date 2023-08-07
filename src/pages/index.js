@@ -46,39 +46,7 @@ const Home = (props) => {
     <>
       <Page>
         <Navbar info={props.navbar} />
-        {width >= small ? (
-          <>
-            <CoverSection width={width}>
-              <Parallax speed={1}>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5, ease: "easeIn" }}
-                  style={{ display: "flex", justifyContent: "center" }}
-                >
-
-
-                  <Image src={logo2} alt="logo" className="logo"/>
-                </motion.div>
-              </Parallax>
-            </CoverSection>
-          </>
-        ) : (
-          <>
-            <CoverSectionMobile width={width}>
-              <Parallax speed={1}>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5, ease: "easeIn" }}
-                  style={{ display: "flex", justifyContent: "center" }}
-                >
-                  <Logo src={logo2} alt="logo"/>
-                </motion.div>
-              </Parallax>
-            </CoverSectionMobile>
-          </>
-        )}
+       
 
         <section id="services">
           <Services info={props.services} />
